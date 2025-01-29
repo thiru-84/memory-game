@@ -1,39 +1,6 @@
-let flippedCards = []; 
 
-// onclick event
-function shuffleCards() {
-    // storing the cards in an array - "cards-holder" class holds 
-    const containers = document.querySelectorAll('.cards-holder > div'); 
 
-    containers.forEach((container) => {
-        // get all cards in each container for shuffling it on click
-        const cards = Array.from(container.querySelectorAll('.card')); 
-
-        // shuffle
-        const shuffleCount = 20; 
-        for (let pass = 0; pass < shuffleCount; pass++) {
-            for (let i = cards.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [cards[i], cards[j]] = [cards[j], cards[i]]; 
-            }
-        }
-
-        // append shuffled cards
-        cards.forEach((card) => container.appendChild(card));
-
-        // if shuffled hide back side or go back to default
-        cards.forEach((card) => {
-            const showValue = card.querySelector('.front-value');
-            const hideValue = card.querySelector('.back-value');
-            showValue.style.display = 'block'; // show the front value
-            hideValue.style.display = 'none'; // hide the back value
-        });
-    });
-
-    // makes the array empty 
-    flippedCards = [];
-}
-
+// ------------------------------------------------------- 1st part of the code-------------------------------------------------------
 
 // flip the card
 function switchSides(event) {
@@ -74,4 +41,45 @@ function switchSides(event) {
             }, 1000); 
         }
     }
+}
+
+// ------------------------------------------------------- 2nd part of the code-------------------------------------------------------
+
+
+//empty array to store user selected cards... (for comparison purpose)
+let flippedCards = []; 
+
+
+// onclick event
+function shuffleCards() {
+    // storing the cards in an array - "cards-holder" class holds 
+    const containers = document.querySelectorAll('.cards-holder > div'); 
+
+    containers.forEach((container) => {
+        // get all cards in each container for shuffling it on click
+        const cards = Array.from(container.querySelectorAll('.card')); 
+
+        // shuffle
+        const shuffleCount = 20; 
+        for (let pass = 0; pass < shuffleCount; pass++) {
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]]; 
+            }
+        }
+
+        // append shuffled cards
+        cards.forEach((card) => container.appendChild(card));
+
+        // if shuffled hide back side or go back to default
+        cards.forEach((card) => {
+            const showValue = card.querySelector('.front-value');
+            const hideValue = card.querySelector('.back-value');
+            showValue.style.display = 'block'; // show the front value
+            hideValue.style.display = 'none'; // hide the back value
+        });
+    });
+
+    // makes the array empty 
+    flippedCards = [];
 }
