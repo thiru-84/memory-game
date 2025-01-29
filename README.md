@@ -1,5 +1,5 @@
 # Memory Game
-Memory Game where players flip cards to find matching pairs. This game has been created using HTML for structure, CSS for styling, and JavaScript (DOM manipulation) for game logic.
+Memory Game where players flip cards to find matching pairs. 
 
 # Tech Used
 HTML - Structure of the game.
