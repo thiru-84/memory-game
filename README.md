@@ -7,7 +7,7 @@ CSS - Styling of the game, including animation & responsive layout.
 JS - Game logic, including card flipping, shuffling, matching pairs, & restarting
 
 # My Journey
-As someone with 5 years of experience in design which includes UI/UX, I had a strong inclination to make this game both visually appealing, responsive and interactive. I wanted it to truly feel like a game, but the truth is, I never played this specific memory card game before.
+As someone with 5 years of experience in design which includes UI/UX, I had a strong inclination to make this game visually appealing, responsive, and fun to interact with. I wanted it to truly feel like a game, but the truth is, I never played this specific memory card game before.
 
 To start, I researched similar games online to understand the concepts. I faced many challenges along the way, often encountering failed attempts, syntax errors, and issues I couldn't initially resolve. I spent hours referring to available online solutions, but I realized that, as a junior developer, the key takeaway was not just copying others' work — it was figuring out how to identify the core logic behind the game.
 
