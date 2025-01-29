@@ -1,77 +1,76 @@
-let flippedCards = []; // To keep track of flipped cards for comparison
+let flippedCards = []; 
 
-// Enhanced Shuffle function with better randomness and reset (all cards show front)
+// onclick event
 function shuffleCards() {
-    const containers = document.querySelectorAll('.cards-holder > div'); // Get each row of cards
+    // storing the cards in an array - "cards-holder" class holds 
+    const containers = document.querySelectorAll('.cards-holder > div'); 
 
     containers.forEach((container) => {
         const cards = Array.from(container.querySelectorAll('.card')); // Get all cards in each container
 
-        // Enhanced Shuffle using multiple passes of Fisher-Yates algorithm
-        const shuffleCount = 10; // Number of passes to make shuffling more random
+        // shuffle
+        const shuffleCount = 10; 
         for (let pass = 0; pass < shuffleCount; pass++) {
             for (let i = cards.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [cards[i], cards[j]] = [cards[j], cards[i]]; // Swap the cards
+                [cards[i], cards[j]] = [cards[j], cards[i]]; 
             }
         }
 
-        // Re-append shuffled cards to the container
+        
         cards.forEach((card) => container.appendChild(card));
 
-        // Reset all cards to show the front side by default
+        
         cards.forEach((card) => {
             const showValue = card.querySelector('.front-value');
             const hideValue = card.querySelector('.back-value');
-            showValue.style.display = 'block'; // Show the front value
-            hideValue.style.display = 'none'; // Hide the back value
+            showValue.style.display = 'block'; // show the front value
+            hideValue.style.display = 'none'; // hide the back value
         });
     });
 
-    // Reset flipped cards array after shuffle
+    // makes the array empty 
     flippedCards = [];
 }
 
-// Add event listener for shuffle button (reset function)
-document.querySelector('#shuffle-btn')?.addEventListener('click', shuffleCards);
 
-// Flip cards (same logic as before) with comparison
+// flip the card
 function switchSides(event) {
-    const card = event.currentTarget;
-    const showValue = card.querySelector('.front-value');
-    const hideValue = card.querySelector('.back-value');
+    const selectedCard = event.currentTarget;
+    const showValue = selectedCard.querySelector('.front-value');
+    const hideValue = selectedCard.querySelector('.back-value');
 
-    // Prevent flipping if already flipped
+    // make sure not to flip if already flipped
     if (showValue.style.display === 'none') {
         return;
     }
 
-    // Flip the card
-    showValue.style.display = 'none';  // Hide front value
-    hideValue.style.display = 'block'; // Show back value
+    // flip the card
+    showValue.style.display = 'none';  // adding styles to hide the value
+    hideValue.style.display = 'block'; // adding styles to show the value
 
     // Add the flipped card to the flippedCards array
-    flippedCards.push(card);
+    flippedCards.push(selectedCard);
 
-    // If two cards are flipped, compare them
+    // set length to 2 so that we can compare the cards
     if (flippedCards.length === 2) {
         const [firstCard, secondCard] = flippedCards;
         const firstBackValue = firstCard.querySelector('.back-value').textContent;
         const secondBackValue = secondCard.querySelector('.back-value').textContent;
 
-        // Compare the back values of the two flipped cards
+        // strict comparison of the two values
         if (firstBackValue === secondBackValue) {
-            // Match found - leave the cards flipped
-            flippedCards = []; // Reset flipped cards array
+            // makes the array empty 
+            flippedCards = []; 
         } else {
-            // No match - flip the cards back after a short delay
+            // in case of no match - flip the cards back after 1s
             setTimeout(() => {
                 firstCard.querySelector('.front-value').style.display = 'block';
                 firstCard.querySelector('.back-value').style.display = 'none';
                 secondCard.querySelector('.front-value').style.display = 'block';
                 secondCard.querySelector('.back-value').style.display = 'none';
                 flippedCards = []; // Reset flipped cards array
-            }, 1000); // Delay before flipping back
+            }, 1000); 
         }
     }
 }

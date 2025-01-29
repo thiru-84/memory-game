@@ -87,7 +87,7 @@ h1 {
 
 /* Card Styles */
 .card {
-    perspective: 10000px;
+    perspective: 1000px;
 }
 
 .card-inner {
