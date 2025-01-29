@@ -6,7 +6,8 @@ function shuffleCards() {
     const containers = document.querySelectorAll('.cards-holder > div'); 
 
     containers.forEach((container) => {
-        const cards = Array.from(container.querySelectorAll('.card')); // Get all cards in each container
+        // get all cards in each container for shuffling it on click
+        const cards = Array.from(container.querySelectorAll('.card')); 
 
         // shuffle
         const shuffleCount = 20; 
