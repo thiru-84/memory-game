@@ -18,10 +18,10 @@ function shuffleCards() {
             }
         }
 
-        
+        // append shuffled cards
         cards.forEach((card) => container.appendChild(card));
 
-        
+        // if shuffled hide back side or go back to default
         cards.forEach((card) => {
             const showValue = card.querySelector('.front-value');
             const hideValue = card.querySelector('.back-value');
