@@ -9,7 +9,7 @@ function shuffleCards() {
         const cards = Array.from(container.querySelectorAll('.card')); // Get all cards in each container
 
         // shuffle
-        const shuffleCount = 10; 
+        const shuffleCount = 20; 
         for (let pass = 0; pass < shuffleCount; pass++) {
             for (let i = cards.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
