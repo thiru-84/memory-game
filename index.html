@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <section class="game">
+            <h1> Memory Game </h1>
+            <p class="info">Excited to check your memory power?</p>
+            <div class="cards-holder">
+                <div>
+                    <div id="firstPair-1" class="card first-pair" onclick="switchSides(event)">
+                        <div class="card-container" >
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="secondPair-1" class="card second-pair" onclick="switchSides(event)">
+                        <div class="card-container" >
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    200
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="thirdPair-1" class="card third-pair" onclick="switchSides(event)">
+                        <div class="card-container" >
+                            <div class="card-inner ">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    300
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="fourthPair-1" class="card fourth-pair" onclick="switchSides(event)">
+                        <div class="card-container" >
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    400
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="5" class="card fifth-pair" onclick="switchSides(event)">
+                        <div class="card-container" >
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    500
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="fourthPair-2" class="card fourth-pair">
+                        <div class="card-container" onclick="switchSides(event)">
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    400
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div id="thirdPair-2" class="card third-pair">
+                        <div class="card-container" onclick="switchSides(event)">
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    300
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="secondPair-2" class="card second-pair">
+                        <div class="card-container" onclick="switchSides(event)">
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    200
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="firstPair-2" class="card first-pair">
+                        <div class="card-container" onclick="switchSides(event)">
+                            <div class="card-inner">
+                                <div class="card-values front-value">
+                                    .
+                                </div>
+                                <div class="card-values back-value">
+                                    100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+            <button class="button" id="role" onclick="shuffleCards()">Restart</button>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
