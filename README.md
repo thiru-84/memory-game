@@ -1,9 +1,6 @@
 # Memory Game
 Memory Game where players flip cards to find matching pairs. 
 
-# Link
-https://dom-js-memory-game.netlify.app/ 
-
 # Tech Used
 HTML - Structure of the game.
 CSS - Styling of the game, including animation & responsive layout.
@@ -15,6 +12,9 @@ As someone with 5 years of experience in design which includes UI/UX, I had a st
 To start, I researched similar games online to understand the concepts. I faced many challenges along the way, often encountering failed attempts, syntax errors, and issues I couldn't initially resolve. I spent hours referring to available online solutions, but I realized that, as a junior developer, the key takeaway was not just copying others' work — it was figuring out how to identify the core logic behind the game.
 
 Through trial and error, I started understanding how to structure the game, and despite the difficulties with syntax and unfamiliar aspects of coding, I pushed through. I learned that without referencing online solutions, solving these problems would have been even harder. Each failure taught me a valuable lesson in problem-solving and persistence.
+
+# Link
+https://dom-js-memory-game.netlify.app/ 
 
 # Features
 Game Title and Restart Button:
